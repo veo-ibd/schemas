@@ -1,6 +1,6 @@
 # VEO-IBD JSON schemas
 
-## v0.0.2-dev ([view source](https://github.com/veo-ibd/veoibd-schemas/tree/17db90cdf30e489620a7c2a8b55ff614bc9ed68c))
+## v0.0.2-dev ([view source](https://github.com/veo-ibd/veoibd-schemas/tree/da0d23c25ac9610c56bd1a58f0eb044adfb7ac2a))
 - [veoibd_individual_schema.json](assets/releases/v0.0.2-dev/veoibd_individual_schema.json)
 - [veoibd_specimen_schema.json](assets/releases/v0.0.2-dev/veoibd_specimen_schema.json)
 - [clinicalData.json](assets/releases/v0.0.2-dev/clinicalData.json)
