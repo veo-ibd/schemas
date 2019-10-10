@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/veo-ibd/veoibd-schemas.svg?branch=master)](https://travis-ci.com/veo-ibd/veoibd-schemas)
+
 # schemas
 JSON schemas for VEO-IBD data submission
 
@@ -6,6 +8,8 @@ JSON schemas for VEO-IBD data submission
 ### Updating the schemas
 
 The schemas themselves are stored in [schemas/](schemas/). These can be updated using pull requests.
+
+The JSON files are linted on each commit and pull request through Travis.
 
 ### Publishing a new version of the schemas
 
