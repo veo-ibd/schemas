@@ -1,0 +1,136 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/veoibd_schema.json",
+  "title": "clinical data manifest schema",
+  "description": "Validates clinical data manifests provided by VEOIBD consortium members",
+  "type": "object",
+  "properties": {
+    "individualID": {
+      "type": "string",
+      "pattern": "^VEOIBD-"
+    },
+    "sex": {
+      "$ref": "https://veo-ibd.github.io/veoibd-schemas/assets/releases/v0.0.2-dev/clinicalData.json#/definitions/sex"
+    },
+    "ageDxYears": {
+      "$ref": "https://veo-ibd.github.io/veoibd-schemas/assets/releases/v0.0.2-dev/clinicalData.json#/definitions/ageDxYears"
+    },
+    "ancestryJewish": {
+      "$ref": "https://veo-ibd.github.io/veoibd-schemas/assets/releases/v0.0.2-dev/clinicalData.json#/definitions/ancestryJewish"
+    },
+    "perianalInvolvement": {
+      "$ref": "https://veo-ibd.github.io/veoibd-schemas/assets/releases/v0.0.2-dev/clinicalData.json#/definitions/perianalInvolvement"
+    },
+    "diseaseBehaviorStricturing": {
+      "$ref": "https://veo-ibd.github.io/veoibd-schemas/assets/releases/v0.0.2-dev/clinicalData.json#/definitions/diseaseBehaviorStricturing"
+    },
+    "breastFed": {
+      "$ref": "https://veo-ibd.github.io/veoibd-schemas/assets/releases/v0.0.2-dev/clinicalData.json#/definitions/breastFed"
+    },
+    "familyHistory": {
+      "$ref": "https://veo-ibd.github.io/veoibd-schemas/assets/releases/v0.0.2-dev/clinicalData.json#/definitions/familyHistory"
+    },
+    "firstDegree": {
+      "$ref": "https://veo-ibd.github.io/veoibd-schemas/assets/releases/v0.0.2-dev/clinicalData.json#/definitions/firstDegree"
+    },
+    "secondDegreePlus": {
+      "$ref": "https://veo-ibd.github.io/veoibd-schemas/assets/releases/v0.0.2-dev/clinicalData.json#/definitions/secondDegree"
+    },
+    "smokingHistory": {
+      "$ref": "https://veo-ibd.github.io/veoibd-schemas/assets/releases/v0.0.2-dev/clinicalData.json#/definitions/smokingHistory"
+    },
+    "smokingYears": {
+      "$ref": "https://veo-ibd.github.io/veoibd-schemas/assets/releases/v0.0.2-dev/clinicalData.json#/definitions/smokingYears"
+    },
+    "smokePerDay": {
+      "$ref": "https://veo-ibd.github.io/veoibd-schemas/assets/releases/v0.0.2-dev/clinicalData.json#/definitions/smokePerDay"
+    },
+    "householdSmokingHistory": {
+      "$ref": "https://veo-ibd.github.io/veoibd-schemas/assets/releases/v0.0.2-dev/clinicalData.json#/definitions/householdSmokingHistory"
+    },
+    "maternalSmokingHistory": {
+      "$ref": "https://veo-ibd.github.io/veoibd-schemas/assets/releases/v0.0.2-dev/clinicalData.json#/definitions/maternalSmokingHistory"
+    },
+    "consanguinity": {
+      "$ref": "https://veo-ibd.github.io/veoibd-schemas/assets/releases/v0.0.2-dev/clinicalData.json#/definitions/consanguinity"
+    },
+    "countryOfOrigin": {
+      "$ref": "https://veo-ibd.github.io/veoibd-schemas/assets/releases/v0.0.2-dev/clinicalData.json#/definitions/countryOfOrigin"
+    },
+    "ethnicity": {
+      "$ref": "https://veo-ibd.github.io/veoibd-schemas/assets/releases/v0.0.2-dev/clinicalData.json#/definitions/ethnicity"
+    },
+    "diagnosisPhenotype": {
+      "$ref": "https://veo-ibd.github.io/veoibd-schemas/assets/releases/v0.0.2-dev/clinicalData.json#/definitions/diagnosisPhenotype"
+    },
+    "diseaseLocation": {
+      "$ref": "https://veo-ibd.github.io/veoibd-schemas/assets/releases/v0.0.2-dev/clinicalData.json#/definitions/diseaseLocation"
+    },
+    "otherDiagnosis": {
+      "$ref": "https://veo-ibd.github.io/veoibd-schemas/assets/releases/v0.0.2-dev/clinicalData.json#/definitions/otherDiagnosis"
+    },
+    "medicationAtDx": {
+      "$ref": "https://veo-ibd.github.io/veoibd-schemas/assets/releases/v0.0.2-dev/clinicalData.json#/definitions/medicationAtDx"
+    },
+    "EIM": {
+      "$ref": "https://veo-ibd.github.io/veoibd-schemas/assets/releases/v0.0.2-dev/clinicalData.json#/definitions/EIM"
+    },
+    "surgicalHistory": {
+      "$ref": "https://veo-ibd.github.io/veoibd-schemas/assets/releases/v0.0.2-dev/clinicalData.json#/definitions/surgicalHistory"
+    },
+    "labAssay": {
+      "$ref": "https://veo-ibd.github.io/veoibd-schemas/assets/releases/v0.0.2-dev/clinicalData.json#/definitions/labAssay"
+    },
+    "labAssayResult": {
+      "$ref": "https://veo-ibd.github.io/veoibd-schemas/assets/releases/v0.0.2-dev/clinicalData.json#/definitions/labAssayResult"
+    },
+    "classification": {
+      "$ref": "https://veo-ibd.github.io/veoibd-schemas/assets/releases/v0.0.2-dev/clinicalData.json#/definitions/classification"
+    },
+    "geneticMutation": {
+      "$ref": "https://veo-ibd.github.io/veoibd-schemas/assets/releases/v0.0.2-dev/clinicalData.json#/definitions/geneticMutation"
+    },
+    "preTermBirth": {
+      "$ref": "https://veo-ibd.github.io/veoibd-schemas/assets/releases/v0.0.2-dev/clinicalData.json#/definitions/preTermBirth"
+    },
+    "Csection": {
+      "$ref": "https://veo-ibd.github.io/veoibd-schemas/assets/releases/v0.0.2-dev/clinicalData.json#/definitions/Csection"
+    }
+  },
+  "required": [
+    "individualID",
+    "sex",
+    "ageDxYears",
+    "ancestryJewish",
+    "perianalInvolvement",
+    "diseaseBehaviorStricturing",
+    "breastFed",
+    "familyHistory",
+    "smokingHistory",
+    "householdSmokingHistory",
+    "maternalSmokingHistory",
+    "consanguinity",
+    "countryOfOrigin",
+    "ethnicity",
+    "diagnosisPhenotype",
+    "diseaseLocation",
+    "otherDiagnosis",
+    "medicationAtDx",
+    "EIM",
+    "surgicalHistory"
+  ],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "familyHistory": {
+            "const": "True"
+          }
+        }
+      },
+      "then": {
+        "required": ["firstDegree"]
+      }
+    }
+  ]
+}
