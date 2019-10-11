@@ -25,7 +25,8 @@
           "minimum": 0,
           "maximum": 90
         },
-	{
+        {"type": "string"},
+	      {
           "const": "Unknown",
           "description": "Age at diagnosis is unknown",
           "source": ""
