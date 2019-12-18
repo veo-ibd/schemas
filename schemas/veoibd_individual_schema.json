@@ -6,95 +6,96 @@
   "type": "object",
   "properties": {
     "individualID": {
+      "description": "Identifying string linked to the individual being studied",
       "type": "string",
       "pattern": "^VEOIBD-"
     },
     "sex": {
-      "$ref": "https://veo-ibd.github.io/veoibd-schemas/assets/releases/v0.0.3-dev/clinicalData.json#/definitions/sex"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/experimentalData.json#/definitions/sex"
     },
     "ageDxYears": {
-      "$ref": "https://veo-ibd.github.io/veoibd-schemas/assets/releases/v0.0.3-dev/clinicalData.json#/definitions/ageDxYears"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/ageDxYears"
     },
     "ancestryJewish": {
-      "$ref": "https://veo-ibd.github.io/veoibd-schemas/assets/releases/v0.0.3-dev/clinicalData.json#/definitions/ancestryJewish"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/ancestryJewish"
     },
     "perianalInvolvement": {
-      "$ref": "https://veo-ibd.github.io/veoibd-schemas/assets/releases/v0.0.3-dev/clinicalData.json#/definitions/perianalInvolvement"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/perianalInvolvement"
     },
     "diseaseBehaviorStricturing": {
-      "$ref": "https://veo-ibd.github.io/veoibd-schemas/assets/releases/v0.0.3-dev/clinicalData.json#/definitions/diseaseBehaviorStricturing"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/diseaseBehaviorStricturing"
     },
     "breastFed": {
-      "$ref": "https://veo-ibd.github.io/veoibd-schemas/assets/releases/v0.0.3-dev/clinicalData.json#/definitions/breastFed"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/breastFed"
     },
     "familyHistory": {
-      "$ref": "https://veo-ibd.github.io/veoibd-schemas/assets/releases/v0.0.3-dev/clinicalData.json#/definitions/familyHistory"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/familyHistory"
     },
     "firstDegree": {
-      "$ref": "https://veo-ibd.github.io/veoibd-schemas/assets/releases/v0.0.3-dev/clinicalData.json#/definitions/firstDegree"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/firstDegree"
     },
     "secondDegreePlus": {
-      "$ref": "https://veo-ibd.github.io/veoibd-schemas/assets/releases/v0.0.3-dev/clinicalData.json#/definitions/secondDegree"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/secondDegree"
     },
     "smokingHistory": {
-      "$ref": "https://veo-ibd.github.io/veoibd-schemas/assets/releases/v0.0.3-dev/clinicalData.json#/definitions/smokingHistory"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/smokingHistory"
     },
     "smokingYears": {
-      "$ref": "https://veo-ibd.github.io/veoibd-schemas/assets/releases/v0.0.3-dev/clinicalData.json#/definitions/smokingYears"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/smokingYears"
     },
     "smokePerDay": {
-      "$ref": "https://veo-ibd.github.io/veoibd-schemas/assets/releases/v0.0.3-dev/clinicalData.json#/definitions/smokePerDay"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/smokePerDay"
     },
     "householdSmokingHistory": {
-      "$ref": "https://veo-ibd.github.io/veoibd-schemas/assets/releases/v0.0.3-dev/clinicalData.json#/definitions/householdSmokingHistory"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/householdSmokingHistory"
     },
     "maternalSmokingHistory": {
-      "$ref": "https://veo-ibd.github.io/veoibd-schemas/assets/releases/v0.0.3-dev/clinicalData.json#/definitions/maternalSmokingHistory"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/maternalSmokingHistory"
     },
     "consanguinity": {
-      "$ref": "https://veo-ibd.github.io/veoibd-schemas/assets/releases/v0.0.3-dev/clinicalData.json#/definitions/consanguinity"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/consanguinity"
     },
     "countryOfOrigin": {
-      "$ref": "https://veo-ibd.github.io/veoibd-schemas/assets/releases/v0.0.3-dev/clinicalData.json#/definitions/countryOfOrigin"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/countryOfOrigin"
     },
     "ethnicity": {
-      "$ref": "https://veo-ibd.github.io/veoibd-schemas/assets/releases/v0.0.3-dev/clinicalData.json#/definitions/ethnicity"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/ethnicity"
     },
     "diagnosisPhenotype": {
-      "$ref": "https://veo-ibd.github.io/veoibd-schemas/assets/releases/v0.0.3-dev/clinicalData.json#/definitions/diagnosisPhenotype"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/diagnosisPhenotype"
     },
     "diseaseLocation": {
-      "$ref": "https://veo-ibd.github.io/veoibd-schemas/assets/releases/v0.0.3-dev/clinicalData.json#/definitions/diseaseLocation"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/diseaseLocation"
     },
     "otherDiagnosis": {
-      "$ref": "https://veo-ibd.github.io/veoibd-schemas/assets/releases/v0.0.3-dev/clinicalData.json#/definitions/otherDiagnosis"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/otherDiagnosis"
     },
     "medicationAtDx": {
-      "$ref": "https://veo-ibd.github.io/veoibd-schemas/assets/releases/v0.0.3-dev/clinicalData.json#/definitions/medicationAtDx"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/medicationAtDx"
     },
     "EIM": {
-      "$ref": "https://veo-ibd.github.io/veoibd-schemas/assets/releases/v0.0.3-dev/clinicalData.json#/definitions/EIM"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/EIM"
     },
     "surgicalHistory": {
-      "$ref": "https://veo-ibd.github.io/veoibd-schemas/assets/releases/v0.0.3-dev/clinicalData.json#/definitions/surgicalHistory"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/surgicalHistory"
     },
     "labAssay": {
-      "$ref": "https://veo-ibd.github.io/veoibd-schemas/assets/releases/v0.0.3-dev/clinicalData.json#/definitions/labAssay"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/labAssay"
     },
     "labAssayResult": {
-      "$ref": "https://veo-ibd.github.io/veoibd-schemas/assets/releases/v0.0.3-dev/clinicalData.json#/definitions/labAssayResult"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/labAssayResult"
     },
     "classification": {
-      "$ref": "https://veo-ibd.github.io/veoibd-schemas/assets/releases/v0.0.3-dev/clinicalData.json#/definitions/classification"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/classification"
     },
     "geneticMutation": {
-      "$ref": "https://veo-ibd.github.io/veoibd-schemas/assets/releases/v0.0.3-dev/clinicalData.json#/definitions/geneticMutation"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/geneticMutation"
     },
     "preTermBirth": {
-      "$ref": "https://veo-ibd.github.io/veoibd-schemas/assets/releases/v0.0.3-dev/clinicalData.json#/definitions/preTermBirth"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/preTermBirth"
     },
     "Csection": {
-      "$ref": "https://veo-ibd.github.io/veoibd-schemas/assets/releases/v0.0.3-dev/clinicalData.json#/definitions/Csection"
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/Csection"
     }
   },
   "required": [
