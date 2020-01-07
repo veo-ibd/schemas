@@ -7,10 +7,13 @@ git checkout master
 
 # Find the last released tag version on the master branch.
 newversion=$(git describe --tags --abbrev=0)
-lastcommit=$(git rev-parse HEAD)
 echo "Found release version ${newversion}, commit ${lastcommit}."
 
-git checkout ${recent}
+# Switch to the lastest released version to get the schema files
+git checkout ${newversion}
+
+# Last commit on this tag to build URL to
+lastcommit=$(git rev-parse HEAD)
 
 # Copy schema files to temporary directory
 rm -rf pages-out || exit 0;
