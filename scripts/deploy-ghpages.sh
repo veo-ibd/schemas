@@ -47,4 +47,4 @@ git add index.md
 
 git commit -m "Deployed new release ${newversion} to Github Pages"
 
-git push --force --quiet gh-pages:gh-pages
+# git push --force --quiet --upstream gh-pages
