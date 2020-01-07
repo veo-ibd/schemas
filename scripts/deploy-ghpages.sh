@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+# A script to deploy JSON schema files to a GitHub pages branch.
+# This requires that GitHub releases are used, and deploys the most 
+# recent tagged release. If the expected output directory already exists, 
+# the script exits without modifying anything (releases will not be overwritten).
+
 # The prefix of the URL where new released files will be
 URLSTUB='https://github.com/veo-ibd/veoibd-schemas/blob/gh-pages/'
 
@@ -26,7 +31,7 @@ git checkout gh-pages
 if [ -d "assets/releases/${newversion}" ]
 then
 echo "Release ${newversion} directory exists, exiting.";
-exit 1;
+exit 0;
 fi
 
 mkdir assets/releases/${newversion}
