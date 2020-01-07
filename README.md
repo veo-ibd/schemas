@@ -13,10 +13,8 @@ The JSON files are linted on each commit and pull request through Travis.
 
 ### Publishing a new version of the schemas
 
-This repository has GitHub pages enabled on the `gh-pages` branch.
+This repository has GitHub pages enabled on the `gh-pages` branch. Following these instructions will deploy schema files and update the index page with the most recent tagged release in this GitHub repository.
 
-1. Get a copy of the files in the [schema/](schema/) directory outside of the repository.
-1. Switch to the `gh-pages` branch.
-1. Make a new directory (named via semantic versioning) in [docs/assets/releases/](docs/assets/releases/) for the new published schema version.
-1. Move the files you copied from [schema/](schema/) into the new publishing directory.
-1. Update the `index.md` with links to the files in the new release folder, including a link to the commit tree for the master branch at the time that you did the copy.
+1. Create a new GitHub release on the master branch, named via semantic versioning (`vX.X.X`). If this is a development release, name it with a `-devX` suffix.
+1. On your local machine, make sure that you are on the master branch and run `git fetch` or otherwise make sure you have the most recent remote changes.
+1. Run the script at [`scripts/deploy-ghpages.sh`](scripts/deploy-ghpages.sh)
