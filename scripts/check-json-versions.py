@@ -53,13 +53,15 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("url", type=str)
     parser.add_argument("--version", type=str)
+    parser.add_argument("-q", "--quiet", action="store_true")
     args = parser.parse_args()
 
     res = check_versions(args.url, args.version)
     
     if res:
         raise ValueError("Version number {version} does not match refs for: {res}.".format(res=res, version=args.version))
-    else:
+    
+    if not args.quiet:
         print("All version numbers match.")
 
 if __name__ == "__main__":
