@@ -5,6 +5,8 @@
 # recent tagged release. If the expected output directory already exists, 
 # the script exits without modifying anything (releases will not be overwritten).
 
+set -o errexit
+
 # The prefix of the URL where new released files will be
 URLSTUB='https://github.com/veo-ibd/veoibd-schemas/blob/gh-pages/'
 
