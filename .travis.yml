@@ -2,5 +2,19 @@ language: python
 
 # command to run tests
 install: pip install -r requirements.txt
-script:
-  - find . -name \*.json  | xargs -I {} jsonlint -q {}
+
+include:
+  - stage: lint
+    if: type = pull_request
+    script:
+      - find . -name \*.json  | xargs -I {} jsonlint -q {}
+  - stage: check-version
+    if: branch = develop
+    script:
+      - scripts/check-versions.sh
+  - stage: deploy-ghpages
+    if: branch = master
+    deploy:
+      provider: script
+      script: scripts/deploy-ghpages.sh
+      skip_cleanup: true
