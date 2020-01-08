@@ -13,9 +13,6 @@ URLSTUB='https://github.com/veo-ibd/veoibd-schemas/blob/gh-pages/'
 git config --global user.email "deploy@travis-ci.org"
 git config --global user.name "Travis CI"
 
-git fetch
-
-
 git checkout master
 
 # Find the last released tag version on the master branch.
@@ -34,7 +31,9 @@ mkdir pages-out
 cp schemas/*.json ./pages-out/
 
 # Create new release files on gh-pages branch
-git checkout gh-pages
+git remote add upstream "https://$GITHUB_TOKEN@github.com/veo-ibd/veoibd-schemas.git"
+git fetch upstream
+git checkout -b my-gh-pages upstream/gh-pages
 
 if [ -d "assets/releases/${newversion}" ]
 then
