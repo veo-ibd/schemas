@@ -3,6 +3,8 @@ language: python
 # command to run tests
 install: pip install -r requirements.txt
 
+if: branch IN (master, develop)
+
 jobs:
   include:
     - stage: lint
@@ -14,7 +16,12 @@ jobs:
         - bin/check-versions.sh
     - stage: deploy
       if: branch = master
+      script: echo "Deploying to GitHub Pages..."
       deploy:
         provider: script
         script: bin/deploy-ghpages.sh
         skip_cleanup: true
+        on:
+          repo: Sage-Bionetworks/veoibd-schemas
+          branch: master
+
