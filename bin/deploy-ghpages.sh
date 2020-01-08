@@ -15,6 +15,7 @@ git config --global user.name "Travis CI"
 
 git fetch
 
+
 git checkout master
 
 # Find the last released tag version on the master branch.
