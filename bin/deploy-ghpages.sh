@@ -48,7 +48,8 @@ printf "## ${newversion} ([view source](https://github.com/veo-ibd/veoibd-schema
 
 thefiles=$(find assets/releases/${newversion} -name "*.json")
 for f in ${thefiles} ; do
-    echo "- [${f}](assets/releases/${newversion}/${f})" >> pages-out/tmp-index.md ;
+    basefilename=$(basename ${f})
+    echo "- [${basefilename}](${f})" >> pages-out/tmp-index.md ;
 done
 
 # Build new index.md
