@@ -12,10 +12,9 @@ jobs:
       if: branch = develop
       script:
         - scripts/check-versions.sh
-
-    # - stage: deploy-ghpages
-    #   if: branch = master
-    #   deploy:
-    #     provider: script
-    #     script: scripts/deploy-ghpages.sh
-    #     skip_cleanup: true
+    - stage: deploy-ghpages
+      if: branch = master
+      deploy:
+        provider: script
+        script: scripts/deploy-ghpages.sh
+        skip_cleanup: true
