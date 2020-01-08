@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """Check versions inside JSON schema files.
 
 These can be in '$id' and '$ref' fields.
@@ -19,7 +20,7 @@ import os
 import requests
 import urllib
 
-def check_versions(url, version):
+def check_versions(path, version):
     """Check version of all '$ref's in the properties of a JSON file.
 
     Returns a dictionary where the version does not match.
@@ -27,10 +28,15 @@ def check_versions(url, version):
 
     """
 
-    jsonfile = requests.get(url)
-    schema = jsonfile.json()
+    with open(path) as jsonfile:
+        schema = json.load(jsonfile)
     
     non_matching = {}
+
+    try:
+        properties = schema['properties']
+    except KeyError:
+        return non_matching
 
     for key in schema['properties']:
         try:
@@ -51,12 +57,12 @@ def main():
     import argparse
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("url", type=str)
+    parser.add_argument("jsonfile", type=str)
     parser.add_argument("--version", type=str)
     parser.add_argument("-q", "--quiet", action="store_true")
     args = parser.parse_args()
 
-    res = check_versions(args.url, args.version)
+    res = check_versions(args.jsonfile, args.version)
     
     if res:
         raise ValueError("Version number {version} does not match refs for: {res}.".format(res=res, version=args.version))
