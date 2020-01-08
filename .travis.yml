@@ -22,6 +22,6 @@ jobs:
         script: bin/deploy-ghpages.sh
         skip_cleanup: true
         on:
-          repo: Sage-Bionetworks/veoibd-schemas
+          repo:  veo-ibd/veoibd-schemas
           branch: master
 
