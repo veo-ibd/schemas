@@ -9,10 +9,12 @@ include:
     if: type = pull_request
     script:
       - find . -name \*.json  | xargs -I {} jsonlint -q {}
+
   - stage: check-version
     if: branch = develop
     script:
       - scripts/check-versions.sh
+
   - stage: deploy-ghpages
     if: branch = master
     deploy:
