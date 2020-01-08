@@ -10,6 +10,11 @@ set -o errexit
 # The prefix of the URL where new released files will be
 URLSTUB='https://github.com/veo-ibd/veoibd-schemas/blob/gh-pages/'
 
+git config --global user.email "deploy@travis-ci.org"
+git config --global user.name "Travis CI"
+
+git fetch
+
 git checkout master
 
 # Find the last released tag version on the master branch.
