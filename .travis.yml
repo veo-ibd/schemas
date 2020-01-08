@@ -2,7 +2,6 @@ language: python
 
 # command to run tests
 install: pip install -r requirements.txt
-script: echo "Hello!"
 
 jobs:
   include:
@@ -14,9 +13,9 @@ jobs:
       script:
         - scripts/check-versions.sh
 
-  # - stage: deploy-ghpages
-  #   if: branch = master
-  #   deploy:
-  #     provider: script
-  #     script: scripts/deploy-ghpages.sh
-  #     skip_cleanup: true
+    # - stage: deploy-ghpages
+    #   if: branch = master
+    #   deploy:
+    #     provider: script
+    #     script: scripts/deploy-ghpages.sh
+    #     skip_cleanup: true
