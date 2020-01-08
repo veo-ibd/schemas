@@ -15,6 +15,7 @@ jobs:
       script:
         - bin/check-versions.sh
     - stage: deploy
+      if: branch = master
       script: echo "Deploying to GitHub Pages..."
       deploy:
         provider: script
