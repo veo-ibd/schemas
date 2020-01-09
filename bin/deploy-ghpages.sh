@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 
 # A script to deploy JSON schema files to a GitHub pages branch.
-# This requires that GitHub releases are used, and deploys the most 
-# recent tagged release. If the expected output directory already exists, 
-# the script exits without modifying anything (releases will not be overwritten).
+# If the expected output directory already exists,  the script exits 
+# without modifying anything (releases will not be overwritten).
 
 set -o errexit
 
