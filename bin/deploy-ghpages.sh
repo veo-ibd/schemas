@@ -5,8 +5,13 @@
 # recent tagged release. If the expected output directory already exists, 
 # the script exits without modifying anything (releases will not be overwritten).
 
+set -o errexit
+
 # The prefix of the URL where new released files will be
 URLSTUB='https://github.com/veo-ibd/veoibd-schemas/blob/gh-pages/'
+
+git config --global user.email "deploy@travis-ci.org"
+git config --global user.name "Travis CI"
 
 git checkout master
 
@@ -26,7 +31,9 @@ mkdir pages-out
 cp schemas/*.json ./pages-out/
 
 # Create new release files on gh-pages branch
-git checkout gh-pages
+git remote add upstream "https://$GITHUB_TOKEN@github.com/veo-ibd/veoibd-schemas.git"
+git fetch upstream
+git checkout -b my-gh-pages upstream/gh-pages
 
 if [ -d "assets/releases/${newversion}" ]
 then
@@ -41,7 +48,8 @@ printf "## ${newversion} ([view source](https://github.com/veo-ibd/veoibd-schema
 
 thefiles=$(find assets/releases/${newversion} -name "*.json")
 for f in ${thefiles} ; do
-    echo "- [${f}](assets/releases/${newversion}/${f})" >> pages-out/tmp-index.md ;
+    basefilename=$(basename ${f})
+    echo "- [${basefilename}](${f})" >> pages-out/tmp-index.md ;
 done
 
 # Build new index.md
@@ -55,4 +63,4 @@ git add index.md
 
 git commit -m "Deployed new release ${newversion} to Github Pages"
 
-# git push --force --quiet --upstream gh-pages
+git push --force --quiet upstream HEAD:gh-pages

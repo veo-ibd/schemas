@@ -2,5 +2,26 @@ language: python
 
 # command to run tests
 install: pip install -r requirements.txt
-script:
-  - find . -name \*.json  | xargs -I {} jsonlint -q {}
+
+if: branch IN (master, develop)
+
+jobs:
+  include:
+    - stage: lint
+      if: type = pull_request
+      script: find . -name \*.json  | xargs -I {} jsonlint -q {}
+    - stage: check-version
+      if: branch = develop
+      script:
+        - bin/check-versions.sh
+    - stage: deploy
+      if: branch = master
+      script: echo "Deploying to GitHub Pages..."
+      deploy:
+        provider: script
+        script: bin/deploy-ghpages.sh
+        skip_cleanup: true
+        on:
+          repo:  veo-ibd/veoibd-schemas
+          branch: master
+
