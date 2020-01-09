@@ -10,10 +10,10 @@ jobs:
     - stage: lint
       if: type = pull_request
       script: find . -name \*.json  | xargs -I {} jsonlint -q {}
-    - stage: check-version
-      if: branch = develop
-      script:
-        - bin/check-versions.sh
+    # - stage: check-version
+    #   if: branch = develop
+    #   script:
+    #     - bin/check-versions.sh
     - stage: deploy
       if: branch = master
       script: echo "Deploying to GitHub Pages..."

@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 
 # A script to deploy JSON schema files to a GitHub pages branch.
-# This requires that GitHub releases are used, and deploys the most 
-# recent tagged release. If the expected output directory already exists, 
-# the script exits without modifying anything (releases will not be overwritten).
+# If the expected output directory already exists,  the script exits 
+# without modifying anything (releases will not be overwritten).
 
 set -o errexit
 
@@ -16,14 +15,12 @@ git config --global user.name "Travis CI"
 git checkout master
 
 # Find the last released tag version on the master branch.
-newversion=$(git describe --tags --abbrev=0)
-echo "Found release version ${newversion}, commit ${lastcommit}."
-
-# Switch to the lastest released version to get the schema files
-git checkout ${newversion}
+newversion=$(cat ./VERSION)
 
 # Last commit on this tag to build URL to
 lastcommit=$(git rev-parse HEAD)
+
+echo "Found release version ${newversion}, commit ${lastcommit}."
 
 # Copy schema files to temporary directory
 rm -rf pages-out || exit 0;
