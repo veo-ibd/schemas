@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/veoibd_specimen_schema.json",
+  "title": "Specimen data manifest schema",
+  "description": "Validates specimen data manifests provided by VEOIBD consortium members",
+  "type": "object",
+  "properties": {
+    "individualID": {
+      "description": "Identifying string linked to the individual being studied",
+      "type": "string",
+      "pattern": "^VEOIBD-"
+    },
+    "specimenID": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/experimentalData.json#/definitions/specimenID"
+    },
+    "assayID": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/new_schema_refs.json#/definitions/assayID"
+    }
+  },
+  "required": [
+    "individualID",
+    "specimenID",
+    "assayID"
+  ]
+}

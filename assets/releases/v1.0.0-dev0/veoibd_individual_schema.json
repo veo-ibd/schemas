@@ -1,0 +1,137 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/veoibd_schema.json",
+  "title": "clinical data manifest schema",
+  "description": "Validates clinical data manifests provided by VEOIBD consortium members",
+  "type": "object",
+  "properties": {
+    "individualID": {
+      "description": "Identifying string linked to the individual being studied",
+      "type": "string",
+      "pattern": "^VEOIBD-"
+    },
+    "sex": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/current_annotations_schemas/experimentalData.json#/definitions/sex"
+    },
+    "ageDxYears": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/ageDxYears"
+    },
+    "ancestryJewish": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/ancestryJewish"
+    },
+    "perianalInvolvement": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/perianalInvolvement"
+    },
+    "diseaseBehaviorStricturing": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/diseaseBehaviorStricturing"
+    },
+    "breastFed": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/breastFed"
+    },
+    "familyHistory": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/familyHistory"
+    },
+    "firstDegree": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/firstDegree"
+    },
+    "secondDegreePlus": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/secondDegree"
+    },
+    "smokingHistory": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/smokingHistory"
+    },
+    "smokingYears": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/smokingYears"
+    },
+    "smokePerDay": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/smokePerDay"
+    },
+    "householdSmokingHistory": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/householdSmokingHistory"
+    },
+    "maternalSmokingHistory": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/maternalSmokingHistory"
+    },
+    "consanguinity": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/consanguinity"
+    },
+    "countryOfOrigin": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/countryOfOrigin"
+    },
+    "ethnicity": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/ethnicity"
+    },
+    "diagnosisPhenotype": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/diagnosisPhenotype"
+    },
+    "diseaseLocation": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/diseaseLocation"
+    },
+    "otherDiagnosis": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/otherDiagnosis"
+    },
+    "medicationAtDx": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/medicationAtDx"
+    },
+    "EIM": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/EIM"
+    },
+    "surgicalHistory": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/surgicalHistory"
+    },
+    "labAssay": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/labAssay"
+    },
+    "labAssayResult": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/labAssayResult"
+    },
+    "classification": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/classification"
+    },
+    "geneticMutation": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/geneticMutation"
+    },
+    "preTermBirth": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/preTermBirth"
+    },
+    "Csection": {
+      "$ref": "https://sage-bionetworks.github.io/sysbioDCCjsonschemas/releases/v0.0.1-dev/reference_definitions_schemas/clinicalData.json#/definitions/Csection"
+    }
+  },
+  "required": [
+    "individualID",
+    "sex",
+    "ageDxYears",
+    "ancestryJewish",
+    "perianalInvolvement",
+    "diseaseBehaviorStricturing",
+    "breastFed",
+    "familyHistory",
+    "smokingHistory",
+    "householdSmokingHistory",
+    "maternalSmokingHistory",
+    "consanguinity",
+    "countryOfOrigin",
+    "ethnicity",
+    "diagnosisPhenotype",
+    "diseaseLocation",
+    "otherDiagnosis",
+    "medicationAtDx",
+    "EIM",
+    "surgicalHistory"
+  ],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "familyHistory": {
+            "const": "True"
+          }
+        }
+      },
+      "then": {
+        "required": ["firstDegree"]
+      }
+    }
+  ]
+}
