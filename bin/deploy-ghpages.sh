@@ -16,7 +16,7 @@ git config --global user.name "Travis CI"
 git checkout master
 
 # Find the last released tag version on the master branch.
-newversion=$(git describe --tags --abbrev=0)
+newversion=$(cat ./VERSION)
 echo "Found release version ${newversion}, commit ${lastcommit}."
 
 # Switch to the lastest released version to get the schema files
