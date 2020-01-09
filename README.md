@@ -1,4 +1,7 @@
-[![Build Status](https://travis-ci.com/veo-ibd/veoibd-schemas.svg?branch=master)](https://travis-ci.com/veo-ibd/veoibd-schemas)
+Branch | Status
+--- | ---
+Master | [![Build Status](https://travis-ci.com/veo-ibd/veoibd-schemas.svg?branch=master)](https://travis-ci.com/veo-ibd/veoibd-schemas)
+Develop | [![Build Status](https://travis-ci.com/veo-ibd/veoibd-schemas.svg?branch=develop)](https://travis-ci.com/veo-ibd/veoibd-schemas)
 
 # schemas
 JSON schemas for VEO-IBD data submission
