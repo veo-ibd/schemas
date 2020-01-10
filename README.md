@@ -11,7 +11,7 @@ This repository is a registry of JSON schemas used for VEO-IBD data submission.
 
 There are three long running branches in this repository: `master`, `develop`, and `gh-pages`. The `master` branch always has the most recent version of the schemas. All changes to the schemas should be made as pull requests against the `develop` branch. When a new version is ready, a pull request from `develop` to `master` should be made.
 
-The repository has continuous integration set up using Travis CI. JSON linting is performed on all pull requests. Automated deployment to the publicly visible registry on the `gh-pages` branch (accessible at https://veo-ibd.github.io/veoibd-schemas/) is performed when merging `develop` to `master`. Read on below how to prepare for a new version release.
+The repository has continuous integration set up using Travis CI. JSON linting is performed on all pull requests. Automated deployment to the publicly visible registry on the `gh-pages` branch (accessible at <https://veo-ibd.github.io/veoibd-schemas/>) is performed when merging `develop` to `master`. Read on below how to prepare for a new version release.
 
 ### Changing the schemas
 
